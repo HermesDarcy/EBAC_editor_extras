@@ -72,6 +72,8 @@ public static class PlayUtils
         return array[Random.Range(0, array.Length)];
     }
 
+   
+
 
     public static Color ColorString(string cor)
     {

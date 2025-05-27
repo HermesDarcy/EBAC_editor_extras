@@ -50,9 +50,12 @@ public class AreaTriangleEditor : Editor
         if(GUILayout.Button("criar Objeto"))
         {
             mytarget.create();
+            mytarget.changeUmaCor();
         }
 
-       
+        GUI.color = PlayUtils.ColorString(mytarget.umaCor);
+        EditorGUILayout.LabelField(" Nova Cor Randomizada", mytarget.umaCor);
+
 
         // Desenha o restante do Inspector padrão (outras variáveis serializadas)
         //DrawDefaultInspector();

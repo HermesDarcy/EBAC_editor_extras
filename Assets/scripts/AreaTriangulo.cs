@@ -12,7 +12,19 @@ public class AreaTriangulo : MonoBehaviour
     public GameObject objt;
     public cores colorido;
     public Color colorMe;
-    
+    public string umaCor;
+
+    public List<string> mudaCor = new List<string>
+    {
+        "white",
+        "magenta",
+        "green",
+        "yellow",
+        "red",
+        "cyan",
+        "grey",
+        "blue"
+    };
     
     private int limits = 10;
 
@@ -26,6 +38,13 @@ public class AreaTriangulo : MonoBehaviour
         cyan,
         grey, 
         blue
+    }
+
+    
+    public void changeUmaCor()
+    {
+        umaCor = mudaCor.ObjsRandom();
+        Debug.Log(umaCor);
     }
 
 
@@ -59,6 +78,8 @@ public class AreaTriangulo : MonoBehaviour
         
         ob.GetComponent<SpriteRenderer>().color = PlayUtils.ColorString(colorido.ToString());
        
+        changeUmaCor();
+
     }
 
     public string mycolor
